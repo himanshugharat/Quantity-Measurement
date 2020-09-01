@@ -93,6 +93,12 @@ public class MeasurementTest {
     public void given3FeetAnd1YardLength_whenCompareEqual_ShouldReturnTrue() {
         quantityCalculator = new QuantityCalculator();
         boolean compare=quantityCalculator.compareLengths(new Feet(3), new Yard(1));
+        Assert.assertTrue(compare);
+    }
+    @Test
+    public void given1FeetAnd1YardLength_whenCompareNotEqual_ShouldReturnFalse() {
+        quantityCalculator = new QuantityCalculator();
+        boolean compare=quantityCalculator.compareLengths(new Feet(1), new Yard(1));
         Assert.assertFalse(compare);
     }
 }

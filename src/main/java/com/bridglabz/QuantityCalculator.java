@@ -4,7 +4,7 @@ public class QuantityCalculator {
         return length*12;
     }
     public static double yardToFeet(double length){
-        return length*12;
+        return length*3;
     }
 
     public boolean compareLengths(Units lengthOne, Units lengthTwo) {
