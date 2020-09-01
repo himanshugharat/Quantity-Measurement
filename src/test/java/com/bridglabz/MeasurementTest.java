@@ -70,5 +70,11 @@ public class MeasurementTest {
         boolean compare = quantityCalculator.compareLengths(new Inch(0), new Inch(0));
         Assert.assertTrue(compare);
     }
+    @Test
+    public void givenLength_whenCheckSameInch_ShouldReturnTrue() {
+        quantityCalculator = new QuantityCalculator();
+        boolean compare = quantityCalculator.compareLengths(new Inch(10), new Inch(10));
+        Assert.assertTrue(compare);
+    }
 
 }
