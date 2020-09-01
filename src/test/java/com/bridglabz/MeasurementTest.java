@@ -41,4 +41,10 @@ public class MeasurementTest {
         boolean compare = quantityCalculator.compareLengths(new Feet(0),new Feet(0));
         Assert.assertTrue(compare);
     }
+    @Test
+    public void givenLength_whenCheckSameLengths_ShouldReturnTrue() {
+        quantityCalculator = new QuantityCalculator();
+        boolean compare = quantityCalculator.compareLengths(new Feet(10),new Feet(10));
+        Assert.assertTrue(compare);
+    }
 }
