@@ -26,4 +26,15 @@ public class MeasurementTest {
         boolean compare = quantityCalculator.compareLengths(feet, new Feet(0));
         Assert.assertTrue(compare);
     }
+
+    @Test
+    public void givenLength_whenCheckRefLengths_ShouldReturnTrue() {
+        quantityCalculator = new QuantityCalculator();
+        Feet feet = new Feet(0);
+        Feet feet1 = new Feet(0);
+        boolean reference=feet.equals(feet1);
+        boolean compare = quantityCalculator.compareLengths(feet,feet1);
+        Assert.assertTrue(reference);
+        Assert.assertTrue(compare);
+    }
 }
