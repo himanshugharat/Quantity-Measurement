@@ -13,11 +13,10 @@ public class MeasurementTest {
     }
 
     @Test
-    public void givenLength_whenSame_ResultTrue() {
+    public void givenLength_whenZeroLengths_ShouldResultTrue() {
         quantityCalculator = new QuantityCalculator();
-        double lengthInFeet = 1;
-        double LengthInInch = 12;
-        boolean result = quantityCalculator.compareLengths(lengthInFeet, LengthInInch);
-        Assert.assertTrue(result);
+        boolean compare = quantityCalculator.compareLengths(new Feet(0), new Feet(0));
+        Assert.assertTrue(compare);
     }
+
 }
