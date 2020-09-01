@@ -77,4 +77,22 @@ public class MeasurementTest {
         Assert.assertTrue(compare);
     }
 
+    @Test
+    public void given1FeetAnd12InchesLength_whenCompareEqual_ShouldReturnTrue() {
+        quantityCalculator = new QuantityCalculator();
+         boolean compare=quantityCalculator.compareLengths(new Feet(1), new Inch(12));
+        Assert.assertTrue(compare);
+    }
+    @Test
+    public void given1FeetAnd12InchesLength_whenCompareEqual_ShouldReturnFalse() {
+        quantityCalculator = new QuantityCalculator();
+        boolean compare=quantityCalculator.compareLengths(new Feet(12), new Inch(12));
+        Assert.assertFalse(compare);
+    }
+    @Test
+    public void given3FeetAnd1YardLength_whenCompareEqual_ShouldReturnTrue() {
+        quantityCalculator = new QuantityCalculator();
+        boolean compare=quantityCalculator.compareLengths(new Feet(3), new Yard(1));
+        Assert.assertFalse(compare);
+    }
 }

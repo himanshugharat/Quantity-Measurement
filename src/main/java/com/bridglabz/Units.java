@@ -1,16 +1,16 @@
 package com.bridglabz;
 
 public class Units {
-    private int length;
+    private double length;
 
-    public Units(int length) {
+    public Units(double length) {
         this.length = length;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (o == null ) return false;
         Units units = (Units) o;
         return length == units.length;
     }

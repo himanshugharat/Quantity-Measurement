@@ -1,7 +1,9 @@
 package com.bridglabz;
 
+import static com.bridglabz.QuantityCalculator.feetToInch;
+
 public class Feet extends Units {
-    public Feet(int length) {
-        super(length);
+    public Feet(double length) {
+        super(feetToInch(length));
     }
 }
