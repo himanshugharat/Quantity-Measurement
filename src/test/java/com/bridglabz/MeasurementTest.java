@@ -19,4 +19,11 @@ public class MeasurementTest {
         Assert.assertTrue(compare);
     }
 
+    @Test
+    public void givenLength_whenNullLengths_ShouldReturnNullException() {
+        quantityCalculator = new QuantityCalculator();
+        Feet feet=null;
+        boolean compare = quantityCalculator.compareLengths(feet, new Feet(0));
+        Assert.assertTrue(compare);
+    }
 }
