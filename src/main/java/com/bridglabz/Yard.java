@@ -1,7 +1,7 @@
 package com.bridglabz;
 
-import static com.bridglabz.QuantityCalculator.feetToInch;
-import static com.bridglabz.QuantityCalculator.yardToFeet;
+import static com.bridglabz.UnitConversion.feetToInch;
+import static com.bridglabz.UnitConversion.yardToFeet;
 
 public class Yard extends Units {
 
