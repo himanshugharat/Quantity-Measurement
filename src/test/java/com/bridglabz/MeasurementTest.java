@@ -64,12 +64,14 @@ public class MeasurementTest {
         boolean compare = quantityCalculator.compareLengths(inch, inch);
         Assert.assertTrue(compare);
     }
+
     @Test
     public void givenLength_whenCheckType_ShouldReturnTrue() {
         quantityCalculator = new QuantityCalculator();
         boolean compare = quantityCalculator.compareLengths(new Inch(0), new Inch(0));
         Assert.assertTrue(compare);
     }
+
     @Test
     public void givenLength_whenCheckSameInch_ShouldReturnTrue() {
         quantityCalculator = new QuantityCalculator();
@@ -80,25 +82,35 @@ public class MeasurementTest {
     @Test
     public void given1FeetAnd12InchesLength_whenCompareEqual_ShouldReturnTrue() {
         quantityCalculator = new QuantityCalculator();
-         boolean compare=quantityCalculator.compareLengths(new Feet(1), new Inch(12));
+        boolean compare = quantityCalculator.compareLengths(new Feet(1), new Inch(12));
         Assert.assertTrue(compare);
     }
+
     @Test
     public void given1FeetAnd12InchesLength_whenCompareEqual_ShouldReturnFalse() {
         quantityCalculator = new QuantityCalculator();
-        boolean compare=quantityCalculator.compareLengths(new Feet(12), new Inch(12));
+        boolean compare = quantityCalculator.compareLengths(new Feet(12), new Inch(12));
         Assert.assertFalse(compare);
     }
+
     @Test
     public void given3FeetAnd1YardLength_whenCompareEqual_ShouldReturnTrue() {
         quantityCalculator = new QuantityCalculator();
-        boolean compare=quantityCalculator.compareLengths(new Feet(3), new Yard(1));
+        boolean compare = quantityCalculator.compareLengths(new Feet(3), new Yard(1));
         Assert.assertTrue(compare);
     }
+
     @Test
     public void given1FeetAnd1YardLength_whenCompareNotEqual_ShouldReturnFalse() {
         quantityCalculator = new QuantityCalculator();
-        boolean compare=quantityCalculator.compareLengths(new Feet(1), new Yard(1));
+        boolean compare = quantityCalculator.compareLengths(new Feet(1), new Yard(1));
+        Assert.assertFalse(compare);
+    }
+
+    @Test
+    public void given1InchAnd1YardLength_whenCompareNotEqual_ShouldReturnFalse() {
+        quantityCalculator = new QuantityCalculator();
+        boolean compare = quantityCalculator.compareLengths(new Inch(1), new Yard(1));
         Assert.assertFalse(compare);
     }
 }
