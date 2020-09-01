@@ -8,5 +8,4 @@ public class UnitConversion {
     public static double yardToFeet(double length) {
         return length * 3;
     }
-
 }

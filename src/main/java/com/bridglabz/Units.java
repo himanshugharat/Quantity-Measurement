@@ -14,5 +14,4 @@ public class Units {
         Units units = (Units) o;
         return length == units.length;
     }
-
 }
