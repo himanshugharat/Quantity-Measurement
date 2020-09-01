@@ -113,4 +113,11 @@ public class MeasurementTest {
         boolean compare = quantityCalculator.compareLengths(new Inch(1), new Yard(1));
         Assert.assertFalse(compare);
     }
+    @Test
+    public void given1yardAnd36InchLength_whenCompareEqual_ShouldReturnTrue() {
+        quantityCalculator = new QuantityCalculator();
+        boolean compare = quantityCalculator.compareLengths(new Yard(1), new Inch(36));
+        Assert.assertTrue(compare);
+    }
+
 }
