@@ -132,9 +132,15 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given1YardAnd3FeetLength_whenCompareEqual_ShouldReturnTrue() {
+    public void given1YardAnd3FeetLength_whenCompareEqual_ShouldReturnEqual() {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.yard.getUnit(), 1);
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.feet.getUnit(), 3);
+        Assert.assertEquals(quantityUnits, quantityUnits1);
+    }
+    @Test
+    public void given2InchAnd5cmLength_whenCompareEqual_ShouldReturnEqual() {
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.inch.getUnit(), 2);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.cm.getUnit(), 5);
         Assert.assertEquals(quantityUnits, quantityUnits1);
     }
 }

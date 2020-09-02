@@ -3,7 +3,8 @@ package com.bridglabz;
 public enum UnitConverter {
     inch(1),
     feet(12),
-    yard(36);
+    yard(36),
+    cm(0.4);
 
     private final double unit;
 
