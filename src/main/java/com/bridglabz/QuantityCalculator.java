@@ -2,10 +2,17 @@ package com.bridglabz;
 
 public class QuantityCalculator {
 
-    public boolean compareLengths(Units lengthOne, Units lengthTwo) {
-        if (lengthOne == null || lengthTwo == null) {
-            return false;
-        }
-        return lengthOne.equals(lengthTwo);
+    private final double quantity;
+
+    public QuantityCalculator(double conversionType, double quantity) {
+        this.quantity = conversionType * quantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        QuantityCalculator that = (QuantityCalculator) o;
+        return Double.compare(that.quantity, quantity) == 0;
     }
 }
