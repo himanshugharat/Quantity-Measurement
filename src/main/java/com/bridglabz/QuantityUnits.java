@@ -1,10 +1,10 @@
 package com.bridglabz;
 
-public class QuantityCalculator {
+public class QuantityUnits {
 
     private final double quantity;
 
-    public QuantityCalculator(double conversionType, double quantity) {
+    public QuantityUnits(double conversionType, double quantity) {
         this.quantity = conversionType * quantity;
     }
 
@@ -12,7 +12,7 @@ public class QuantityCalculator {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        QuantityCalculator that = (QuantityCalculator) o;
+        QuantityUnits that = (QuantityUnits) o;
         return Double.compare(that.quantity, quantity) == 0;
     }
 }

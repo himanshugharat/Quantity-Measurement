@@ -5,7 +5,7 @@ public enum UnitConverter {
     feet(12),
     yard(36);
 
-    private double unit;
+    private final double unit;
 
     UnitConverter(double unit) {
         this.unit = unit;
