@@ -196,13 +196,21 @@ public class QuantityMeasurementTest {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.gallon.getUnit(), 1);
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.liter.getUnit(), 3.78);
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
-        Assert.assertEquals(7.57,add,0.0);
+        Assert.assertEquals(7.57, add, 0.0);
     }
+
     @Test
     public void given1kgAnd1000grams_WhenCompare_ShouldReturnEqual() {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.kg.getUnit(), 1);
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.gram.getUnit(), 1000);
-        Assert.assertEquals(quantityUnits,quantityUnits1);
+        Assert.assertEquals(quantityUnits, quantityUnits1);
+    }
+
+    @Test
+    public void given1TonneAnd1000Kgs_WhenCompare_ShouldReturnEqual() {
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.tonne.getUnit(), 1);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.kg.getUnit(), 1000);
+        Assert.assertEquals(quantityUnits, quantityUnits1);
     }
 
 
