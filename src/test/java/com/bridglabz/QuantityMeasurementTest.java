@@ -198,4 +198,12 @@ public class QuantityMeasurementTest {
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
         Assert.assertEquals(7.57,add,0.0);
     }
+    @Test
+    public void given1kgAnd1000grams_WhenCompare_ShouldReturnEqual() {
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.kg.getUnit(), 1);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.gram.getUnit(), 1000);
+        Assert.assertEquals(quantityUnits,quantityUnits1);
+    }
+
+
 }
