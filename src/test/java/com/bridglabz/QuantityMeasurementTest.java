@@ -183,10 +183,19 @@ public class QuantityMeasurementTest {
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.liter.getUnit(), 3.78);
         Assert.assertEquals(quantityUnits, quantityUnits1);
     }
+
     @Test
     public void given1LiterAnd1000Ml_WhenEqual_ShouldReturnEqual() {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.liter.getUnit(), 1);
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.ml.getUnit(), 1000);
         Assert.assertEquals(quantityUnits, quantityUnits1);
+    }
+
+    @Test
+    public void given1GallonAnd3point78Liters_WhenAdded_ShouldReturn7point57Liters() {
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.gallon.getUnit(), 1);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.liter.getUnit(), 3.78);
+        double add = QuantityUnits.add(quantityUnits, quantityUnits1);
+        Assert.assertEquals(7.57,add,0.0);
     }
 }

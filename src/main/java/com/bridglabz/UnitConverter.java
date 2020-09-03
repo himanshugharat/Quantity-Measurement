@@ -5,10 +5,9 @@ public enum UnitConverter {
     feet(12),
     yard(36),
     cm(0.4),
-    ml(1),
-    liter(1000),
-    gallon(3780);
-
+    ml(0.001),
+    liter(1),
+    gallon(3.79);
 
     private final double unit;
 
