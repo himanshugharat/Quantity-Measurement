@@ -212,6 +212,13 @@ public class QuantityMeasurementTest {
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.kg.getUnit(), 1000);
         Assert.assertEquals(quantityUnits, quantityUnits1);
     }
+    @Test
+    public void given1TonneAnd1000grams_WhenAdded_ShouldReturn1001Kg() {
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.tonne.getUnit(), 1);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.gram.getUnit(), 1000);
+        double add = QuantityUnits.add(quantityUnits, quantityUnits1);
+        Assert.assertEquals(1001,add,0.0);
+    }
 
 
 }
