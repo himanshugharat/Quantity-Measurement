@@ -176,4 +176,10 @@ public class QuantityMeasurementTest {
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
         Assert.assertEquals(add, 3, 0.0);
     }
+    @Test
+    public void given1GallonAnd3point78Liter_WhenEqual_ShouldReturnEqual() {
+        QuantityUnits quantityUnits=new QuantityUnits(UnitConverter.gallon.getUnit(),1);
+        QuantityUnits quantityUnits1=new QuantityUnits(UnitConverter.liter.getUnit(),3.78);
+        Assert.assertEquals(quantityUnits,quantityUnits1);
+    }
 }
