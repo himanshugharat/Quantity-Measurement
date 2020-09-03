@@ -137,6 +137,7 @@ public class QuantityMeasurementTest {
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.feet.getUnit(), 3);
         Assert.assertEquals(quantityUnits, quantityUnits1);
     }
+
     @Test
     public void given2InchAnd5cmLength_whenCompareEqual_ShouldReturnEqual() {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.inch.getUnit(), 2);
@@ -146,23 +147,33 @@ public class QuantityMeasurementTest {
 
     @Test
     public void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
-        QuantityUnits quantityUnits=new QuantityUnits(UnitConverter.inch.getUnit(),2);
-        QuantityUnits quantityUnits1=new QuantityUnits(UnitConverter.inch.getUnit(),2);
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.inch.getUnit(), 2);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.inch.getUnit(), 2);
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
-        Assert.assertEquals(add,4,0.0);
+        Assert.assertEquals(add, 4, 0.0);
     }
+
     @Test
     public void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
-        QuantityUnits quantityUnits=new QuantityUnits(UnitConverter.feet.getUnit(),1);
-        QuantityUnits quantityUnits1=new QuantityUnits(UnitConverter.inch.getUnit(),2);
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.feet.getUnit(), 1);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.inch.getUnit(), 2);
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
-        Assert.assertEquals(add,14,0.0);
+        Assert.assertEquals(add, 14, 0.0);
     }
+
     @Test
     public void given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
-        QuantityUnits quantityUnits=new QuantityUnits(UnitConverter.feet.getUnit(),1);
-        QuantityUnits quantityUnits1=new QuantityUnits(UnitConverter.feet.getUnit(),1);
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.feet.getUnit(), 1);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.feet.getUnit(), 1);
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
-        Assert.assertEquals(add,24,0.0);
+        Assert.assertEquals(add, 24, 0.0);
+    }
+
+    @Test
+    public void given2InchAnd2point5CM_WhenAdded_ShouldReturn3Inch() {
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.inch.getUnit(), 2);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.cm.getUnit(), 2.5);
+        double add = QuantityUnits.add(quantityUnits, quantityUnits1);
+        Assert.assertEquals(add, 3, 0.0);
     }
 }
