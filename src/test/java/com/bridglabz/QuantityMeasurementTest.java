@@ -151,4 +151,11 @@ public class QuantityMeasurementTest {
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
         Assert.assertEquals(add,4,0.0);
     }
+    @Test
+    public void given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch() {
+        QuantityUnits quantityUnits=new QuantityUnits(UnitConverter.feet.getUnit(),1);
+        QuantityUnits quantityUnits1=new QuantityUnits(UnitConverter.inch.getUnit(),2);
+        double add = QuantityUnits.add(quantityUnits, quantityUnits1);
+        Assert.assertEquals(add,14,0.0);
+    }
 }
