@@ -143,4 +143,12 @@ public class QuantityMeasurementTest {
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.cm.getUnit(), 5);
         Assert.assertEquals(quantityUnits, quantityUnits1);
     }
+
+    @Test
+    public void given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch() {
+        QuantityUnits quantityUnits=new QuantityUnits(UnitConverter.inch.getUnit(),2);
+        QuantityUnits quantityUnits1=new QuantityUnits(UnitConverter.inch.getUnit(),2);
+        double add = QuantityUnits.add(quantityUnits, quantityUnits1);
+        Assert.assertEquals(add,4,0.0);
+    }
 }

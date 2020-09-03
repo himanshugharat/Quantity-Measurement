@@ -7,7 +7,9 @@ public class QuantityUnits {
     public QuantityUnits(double conversionType, double quantity) {
         this.quantity = conversionType * quantity;
     }
-
+    public static double add(QuantityUnits quantityUnits,QuantityUnits quantityUnits1){
+        return quantityUnits.quantity+quantityUnits1.quantity;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
