@@ -158,4 +158,11 @@ public class QuantityMeasurementTest {
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
         Assert.assertEquals(add,14,0.0);
     }
+    @Test
+    public void given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch() {
+        QuantityUnits quantityUnits=new QuantityUnits(UnitConverter.feet.getUnit(),1);
+        QuantityUnits quantityUnits1=new QuantityUnits(UnitConverter.feet.getUnit(),1);
+        double add = QuantityUnits.add(quantityUnits, quantityUnits1);
+        Assert.assertEquals(add,24,0.0);
+    }
 }
