@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">33</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.009s</div>
+<div class="counter">0.025s</div>
 <p>duration</p>
 </div>
 </td>
@@ -51,7 +51,7 @@
 </td>
 <td>
 <div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="percent">96%</div>
 <p>successful</p>
 </div>
 </td>
@@ -75,7 +75,7 @@
 <span class="code">
 <pre>com.bridglabz.ExceptionQuantityMeasurement: Enter corect Quantity
 	at com.bridglabz.QuantityUnits.&lt;init&gt;(QuantityUnits.java:9)
-	at com.bridglabz.QuantityMeasurementTest.givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual(QuantityMeasurementTest.java:238)
+	at com.bridglabz.QuantityMeasurementTest.givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual(QuantityMeasurementTest.java:241)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -138,9 +138,169 @@
 </tr>
 </thead>
 <tr>
+<td class="success">given0FeetAnd0FeetLength_whenEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given0FeetAnd1FeetLength_whenNotEqual_ShouldReturnNotEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given0InchAnd0InchLength_whenEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given0InchAnd1InchLength_whenNotEqual_ShouldReturnNotEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1FeetAnd12InchesLength_whenCompareEqual_ShouldReturnEqual</td>
+<td class="success">0.013s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1FeetAnd1YardLength_whenCompareNotEqual_ShouldReturnNotEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1GallonAnd3point78Liter_WhenEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1GallonAnd3point78Liters_WhenAdded_ShouldReturn7point57Liters</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1InchAnd1YardLength_whenCompareNotEqual_ShouldReturnNotEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1LiterAnd1000Ml_WhenEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1TonneAnd1000Kgs_WhenCompare_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1TonneAnd1000grams_WhenAdded_ShouldReturn1001Kg</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1YardAnd3FeetLength_whenCompareEqual_ShouldReturnEqual</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1kgAnd1000grams_WhenCompare_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given1yardAnd36InchLength_whenCompareEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnEqual</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnNotEqual</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given2InchAnd2point5CM_WhenAdded_ShouldReturn3Inch</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given2InchAnd5cmLength_whenCompareEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given36InchAnd1YardLength_whenCompareEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">given3FeetAnd1YardLength_whenCompareEqual_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenFeet_whenCheckRefFeet_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenFeet_whenCheckTypeOfFeet_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenFeet_whenNullFeet_ShouldNotEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenInch_whenCheckRefInch_ShouldReturnEqual</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenInch_whenCheckSameInch_ShouldReturnEqual</td>
+<td class="success">0.001s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenInch_whenCheckType_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">givenInch_whenNullInch_ShouldReturnNotEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="failures">givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual</td>
-<td class="failures">0.009s</td>
+<td class="failures">0.005s</td>
 <td class="failures">failed</td>
+</tr>
+<tr>
+<td class="success">given_whenFeetCheckSameFeet_ShouldReturnEqual</td>
+<td class="success">0s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
@@ -152,7 +312,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.3</a> at 04-Sep-2020, 2:20:30 AM</p>
+<a href="http://www.gradle.org">Gradle 6.3</a> at 04-Sep-2020, 4:28:56 AM</p>
 </div>
 </div>
 </body>

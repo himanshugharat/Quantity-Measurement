@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bridglabz.QuantityMeasurementTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-09-04T07:20:30" hostname="DESKTOP-GL7D8LT" time="0.009">
+<testsuite name="com.bridglabz.QuantityMeasurementTest" tests="33" skipped="0" failures="1" errors="0" timestamp="2020-09-04T09:28:55" hostname="DESKTOP-GL7D8LT" time="0.058">
   <properties/>
-  <testcase name="givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.009">
+  <testcase name="given1FeetAnd12InchesLength_whenCompareEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.013"/>
+  <testcase name="given1FeetAnd2Inch_WhenAdded_ShouldReturn14Inch" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1TonneAnd1000Kgs_WhenCompare_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenFeet_whenCheckTypeOfFeet_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1YardAnd3FeetLength_whenCompareEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given1kgAnd1000grams_WhenCompare_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.005">
     <failure message="com.bridglabz.ExceptionQuantityMeasurement: Enter corect Quantity" type="com.bridglabz.ExceptionQuantityMeasurement">com.bridglabz.ExceptionQuantityMeasurement: Enter corect Quantity
 	at com.bridglabz.QuantityUnits.&lt;init&gt;(QuantityUnits.java:9)
-	at com.bridglabz.QuantityMeasurementTest.givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual(QuantityMeasurementTest.java:238)
+	at com.bridglabz.QuantityMeasurementTest.givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual(QuantityMeasurementTest.java:241)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -54,6 +60,32 @@
 	at java.base/java.lang.Thread.run(Thread.java:834)
 </failure>
   </testcase>
+  <testcase name="givenInch_whenCheckType_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1GallonAnd3point78Liter_WhenEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenInch_whenCheckSameInch_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given0FeetAnd0FeetLength_whenEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenInch_whenCheckRefInch_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnNotEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given3FeetAnd1YardLength_whenCompareEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenFeet_whenNullFeet_ShouldNotEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.002"/>
+  <testcase name="given1yardAnd36InchLength_whenCompareEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given_whenFeetCheckSameFeet_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given0InchAnd1InchLength_whenNotEqual_ShouldReturnNotEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenFeet_whenCheckRefFeet_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1InchAnd1YardLength_whenCompareNotEqual_ShouldReturnNotEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2InchAnd5cmLength_whenCompareEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2InchAnd2point5CM_WhenAdded_ShouldReturn3Inch" classname="com.bridglabz.QuantityMeasurementTest" time="0.001"/>
+  <testcase name="given1FeetAnd1Feet_WhenAdded_ShouldReturn24Inch" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="givenInch_whenNullInch_ShouldReturnNotEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given0InchAnd0InchLength_whenEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1LiterAnd1000Ml_WhenEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1TonneAnd1000grams_WhenAdded_ShouldReturn1001Kg" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1GallonAnd3point78Liters_WhenAdded_ShouldReturn7point57Liters" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given0FeetAnd1FeetLength_whenNotEqual_ShouldReturnNotEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given1FeetAnd1YardLength_whenCompareNotEqual_ShouldReturnNotEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given36InchAnd1YardLength_whenCompareEqual_ShouldReturnEqual" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
+  <testcase name="given2InchAnd2Inch_WhenAdded_ShouldReturn4Inch" classname="com.bridglabz.QuantityMeasurementTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
