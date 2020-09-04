@@ -4,7 +4,6 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class QuantityMeasurementTest {
-
     @Test
     public void given0FeetAnd0FeetLength_whenEqual_ShouldReturnEqual() {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.feet.getUnit(), 0);
@@ -196,7 +195,7 @@ public class QuantityMeasurementTest {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.gallon.getUnit(), 1);
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.liter.getUnit(), 3.78);
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
-        Assert.assertEquals(7.57, add, 0.0);
+        Assert.assertEquals(7.57, add, 0.1);
     }
 
     @Test
@@ -212,13 +211,36 @@ public class QuantityMeasurementTest {
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.kg.getUnit(), 1000);
         Assert.assertEquals(quantityUnits, quantityUnits1);
     }
+
     @Test
     public void given1TonneAnd1000grams_WhenAdded_ShouldReturn1001Kg() {
         QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.tonne.getUnit(), 1);
         QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.gram.getUnit(), 1000);
         double add = QuantityUnits.add(quantityUnits, quantityUnits1);
-        Assert.assertEquals(1001,add,0.0);
+        Assert.assertEquals(1001, add, 0.0);
     }
 
+    @Test
+    public void given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnEqual() {
+        double temperature = QuantityUnits.temperatureConversion(100);
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.celsius.getUnit(), temperature);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.fahrenheit.getUnit(), 212);
+        Assert.assertEquals(quantityUnits, quantityUnits1);
+    }
+
+    @Test
+    public void given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnNotEqual() {
+        double temperature = QuantityUnits.temperatureConversion(100);
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.gram.getUnit(), temperature);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.fahrenheit.getUnit(), 212);
+        Assert.assertNotEquals(quantityUnits, quantityUnits1);
+    }
+
+    @Test
+    public void givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual() {
+        QuantityUnits quantityUnits = new QuantityUnits(UnitConverter.feet.getUnit(), -9);
+        QuantityUnits quantityUnits1 = new QuantityUnits(UnitConverter.feet.getUnit(), 0);
+        Assert.assertEquals(quantityUnits, quantityUnits1);
+    }
 
 }

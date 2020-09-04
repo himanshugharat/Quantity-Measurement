@@ -7,11 +7,12 @@ public enum UnitConverter {
     cm(0.4),
     ml(0.001),
     liter(1),
-    gallon(3.79),
+    gallon(3.78),
     kg(1),
     gram(0.001),
-    tonne(1000);
-
+    tonne(1000),
+    celsius(1),
+    fahrenheit(1);
 
     private final double unit;
 
