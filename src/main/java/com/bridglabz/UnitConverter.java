@@ -20,6 +20,9 @@ public enum UnitConverter {
         this.unit = unit;
     }
 
+    public static double temperatureConversion(double temperature) {
+        return (temperature * 9 / 5) + 32;
+    }
     public double getUnit() {
         return unit;
     }

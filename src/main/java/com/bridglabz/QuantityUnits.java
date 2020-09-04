@@ -15,10 +15,6 @@ public class QuantityUnits {
         return quantityUnits.quantity + quantityUnits1.quantity;
     }
 
-    public static double temperatureConversion(double temperature) {
-        return (temperature * 9 / 5) + 32;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

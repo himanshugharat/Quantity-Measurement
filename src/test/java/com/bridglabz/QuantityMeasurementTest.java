@@ -13,7 +13,7 @@ public class QuantityMeasurementTest {
 
     @Test
     public void given0FeetAnd1FeetLength_whenNotEqual_ShouldReturnNotEqual() {
-        QuantityUnits unit1= new QuantityUnits(UnitConverter.feet.getUnit(), 0);
+        QuantityUnits unit1 = new QuantityUnits(UnitConverter.feet.getUnit(), 0);
         QuantityUnits unit2 = new QuantityUnits(UnitConverter.feet.getUnit(), 1);
         Assert.assertNotEquals(unit1, unit2);
     }
@@ -221,25 +221,25 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    public void given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnEqual() {
-        double temperature = QuantityUnits.temperatureConversion(100);
-        QuantityUnits unit1 = new QuantityUnits(UnitConverter.celsius.getUnit(), temperature);
-        QuantityUnits unit2 = new QuantityUnits(UnitConverter.fahrenheit.getUnit(), 212);
+    public void givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual() {
+        QuantityUnits unit1 = new QuantityUnits(UnitConverter.feet.getUnit(), -9);
+        QuantityUnits unit2 = new QuantityUnits(UnitConverter.feet.getUnit(), 0);
         Assert.assertEquals(unit1, unit2);
     }
 
     @Test
     public void given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnNotEqual() {
-        double temperature = QuantityUnits.temperatureConversion(100);
+        double temperature = UnitConverter.temperatureConversion(100);
         QuantityUnits unit1 = new QuantityUnits(UnitConverter.gram.getUnit(), temperature);
         QuantityUnits unit2 = new QuantityUnits(UnitConverter.fahrenheit.getUnit(), 212);
         Assert.assertNotEquals(unit1, unit2);
     }
 
     @Test
-    public void givenNegativeFeetAnd0FeetLength_whenEqual_ShouldReturnEqual() {
-        QuantityUnits unit1 = new QuantityUnits(UnitConverter.feet.getUnit(), -9);
-        QuantityUnits unit2 = new QuantityUnits(UnitConverter.feet.getUnit(), 0);
+    public void given212FahrenheitAnd100Celsius_WhenCompare_ShouldReturnEqual() {
+        double temperature = UnitConverter.temperatureConversion(100);
+        QuantityUnits unit1 = new QuantityUnits(UnitConverter.celsius.getUnit(), temperature);
+        QuantityUnits unit2 = new QuantityUnits(UnitConverter.fahrenheit.getUnit(), 212);
         Assert.assertEquals(unit1, unit2);
     }
 
